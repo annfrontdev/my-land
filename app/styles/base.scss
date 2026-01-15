@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+html,
+body,
+#__nuxt,
+#__nuxt>div {
+    height: 100%;
+}
+
+.app {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Unbounded", sans-serif;
+    font-size: 18px;
+    line-height: 120%;
+    font-weight: normal;
+    background-color: $secondary;
+    color: $white;
+}
