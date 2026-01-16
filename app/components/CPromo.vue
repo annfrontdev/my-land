@@ -1,13 +1,13 @@
 <script setup lang='ts'>
+import { gsap } from "gsap";
 import AppButton from '~/elements/AppButton.vue';
+import GreenLable from "~/elements/GreenLable.vue";
 </script>
 
 <template>
     <div class="promo">
         <div>
-            <div class="promo__available">
-                <span>Принимаю заказы</span>
-            </div>
+            <GreenLable />
             <h1>Frontend <br /> разработчик</h1>
             <p>Работала в компаниях и на фрилансе, делала лендинги и многостраничные сайты с разным функционалом.
                 Предоставляю услуги создания лендингов под ключ: создам, предоставлю дизайн, настрою для отображения в
@@ -40,31 +40,6 @@ import AppButton from '~/elements/AppButton.vue';
 
     &__connect {
         width: 260px;
-    }
-
-    &__available {
-        border: 2px solid $line;
-        width: 260px;
-        text-align: center;
-        padding: 16px;
-        border-radius: 32px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-
-        &::after {
-            order: -1;
-            position: static;
-            display: block;
-            background-color: $primary;
-            content: "";
-            border-radius: 50%;
-            width: 8px;
-            height: 8px;
-            box-shadow: 0 0 0 1px rgba($primary, 0.2);
-        }
     }
 }
 </style>

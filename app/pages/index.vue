@@ -4,10 +4,11 @@
 <template>
     <div class="main-page">
         <ShortProfile />
-        <div class="main-page__content">
+        <div class="main-page__content js-scroll-content">
             <CPromo />
             <CServices />
             <LatestWork />
+            <CReviews />
             <CContacts />
             <MainFooter />
         </div>
