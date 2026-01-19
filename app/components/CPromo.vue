@@ -2,6 +2,8 @@
 import { gsap } from "gsap";
 import AppButton from '~/elements/AppButton.vue';
 import GreenLable from "~/elements/GreenLable.vue";
+const store = usePopupStore()
+const { openPopup } = store
 </script>
 
 <template>
@@ -13,7 +15,10 @@ import GreenLable from "~/elements/GreenLable.vue";
                 Предоставляю услуги создания лендингов под ключ: создам, предоставлю дизайн, настрою для отображения в
                 интернете.</p>
 
-            <AppButton variant="primary" class="promo__connect">Связаться</AppButton>
+            <div class="promo__btns">
+                <AppButton variant="primary">Связаться</AppButton>
+                <AppButton variant="secondary" @click="openPopup">Резюме</AppButton>
+            </div>
         </div>
     </div>
 </template>
@@ -38,8 +43,10 @@ import GreenLable from "~/elements/GreenLable.vue";
         line-height: 120%;
     }
 
-    &__connect {
-        width: 260px;
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 }
 </style>

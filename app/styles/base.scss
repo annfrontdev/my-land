@@ -19,3 +19,13 @@ body {
     background-color: $secondary;
     color: $white;
 }
+
+.link {
+    color: $white;
+    transition: all 0.2s;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary;
+    }
+}

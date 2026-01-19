@@ -1,4 +1,8 @@
-<script setup lang='ts'></script>
+<script setup lang='ts'>
+import AppButton from '~/elements/AppButton.vue';
+import { contacts } from '~/info';
+
+</script>
 
 <template>
     <div class="short-profile">
@@ -9,19 +13,19 @@
         <div class="short-profile__info">
             <div class="short-profile__author">
                 <div>Анна Серова</div>
-                <div class="short-profile__role">Фронтенд разработчик</div>
+                <div class="short-profile__role">Frontend разработчик</div>
             </div>
 
             <div class="short-profile__text">
-                <Icon name="mdi:map-marker" />Тамбов
+                <Icon name="mdi:map-marker" />{{ contacts.city }}
             </div>
             <div class="short-profile__text">
                 <Icon name="mdi:gmail" />
-                <a href="mailto:ann.frontend.job@gmail.com">ann.frontend.job@gmail.com</a>
+                <a :href="`mailto:${contacts.email}`">{{ contacts.email }}</a>
             </div>
             <div class="short-profile__text">
                 <Icon name="mdi:phone" />
-                <a href="tel:+79251468456">+79251468456</a>
+                <a :href="`tel:${contacts.phone}`"> {{ contacts.phone }}</a>
             </div>
         </div>
     </div>
@@ -41,6 +45,17 @@
         object-position: top;
         width: 100%;
         height: 100%;
+    }
+
+    &__cv {
+        margin-top: 2rem;
+
+        button {
+            font-size: 1rem;
+            height: 40px;
+            padding: 8px;
+            width: 100%;
+        }
     }
 
     &__avatar {

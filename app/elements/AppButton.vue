@@ -11,7 +11,6 @@ defineProps<Props>()
 <template>
     <button type="button" class="app-button" :class="variant">
         <slot></slot>
-        <Icon name="mdi:arrow-right" />
     </button>
 </template>
 
@@ -27,13 +26,29 @@ defineProps<Props>()
     align-items: center;
     gap: 8px;
     padding: 1rem;
+    transition: all 0.3s;
+    border: 2px solid $primary;
 
     &.primary {
         background-color: $primary;
+
     }
 
     &.secondary {
-        border: 2px solid $primary;
+        color: $primary;
+    }
+
+    &:hover {
+        &.primary {
+            border: 2px solid $primary;
+            color: $primary;
+            background-color: transparent;
+        }
+
+        &.secondary {
+            background-color: $primary;
+            color: $black;
+        }
     }
 }
 </style>

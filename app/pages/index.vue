@@ -1,4 +1,8 @@
 <script setup lang='ts'>
+import { usePopupStore } from '~/stores/popupStore';
+const store = usePopupStore()
+const { isOpen } = storeToRefs(store)
+const { closePopup } = store
 </script>
 
 <template>
@@ -12,6 +16,8 @@
             <CContacts />
             <MainFooter />
         </div>
+
+        <CVPopup v-if="isOpen" @closePopup="closePopup" />
     </div>
 </template>
 
