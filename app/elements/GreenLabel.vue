@@ -19,7 +19,8 @@ const timeline = gsap.timeline({
 
 onMounted(() => {
     if (!lightRef.value) return;
-    startAnimation(timeline, lightRef.value,);
+    
+    startAnimation(timeline, lightRef.value);
 
     ScrollTrigger.create({
         scroller: '.js-scroll-content',

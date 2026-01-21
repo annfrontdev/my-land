@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import { gsap } from "gsap";
 import AppButton from '~/elements/AppButton.vue';
-import GreenLable from "~/elements/GreenLable.vue";
+import GreenLabel from "~/elements/GreenLabel.vue";
 const store = usePopupStore()
 const { openPopup } = store
 </script>
@@ -9,7 +9,7 @@ const { openPopup } = store
 <template>
     <div class="promo">
         <div>
-            <GreenLable />
+            <GreenLabel />
             <h1>Frontend <br /> разработчик</h1>
             <p>Работала в компаниях и на фрилансе, делала лендинги и многостраничные сайты с разным функционалом.</p>
             <p> Предоставляю услуги создания лендингов под ключ: создам, предоставлю дизайн, настрою для отображения в

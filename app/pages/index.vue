@@ -36,7 +36,7 @@ const { closePopup } = store
     @media (max-width: $tablet) {
         grid-template-columns: 1fr;
         overflow-y: auto;
-        height: auto;
+        height: 100%;
 
         &__short-profile {
             display: none;

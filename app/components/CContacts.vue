@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import { contacts } from '~/info';
+
 </script>
 
 <template>
@@ -8,12 +10,13 @@
         <div>
             <div class="contacts__link">
                 <span>Почта для связи</span>
-                <a href="mailto:ann.frontend.job@gmail.com">ann.frontend.job@gmail.com</a>
-            </div>
+                <a :href="`mailto:${contacts.email}`">{{ contacts.email }}</a>
 
-            <div class="contacts__link">
-                <span> Если нужно обсудить голосом</span>
-                <a href="tel:+79251468456">+79251468456</a>
+
+                <div class="contacts__link">
+                    <span> Если нужно обсудить голосом</span>
+                    <a :href="`tel:${contacts.phone}`"> {{ contacts.phone }}</a>
+                </div>
             </div>
         </div>
     </div>

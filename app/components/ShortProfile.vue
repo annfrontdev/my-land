@@ -1,7 +1,5 @@
 <script setup lang='ts'>
-import AppButton from '~/elements/AppButton.vue';
 import { contacts } from '~/info';
-
 </script>
 
 <template>

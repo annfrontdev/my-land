@@ -3,9 +3,7 @@
 
 <template>
     <footer class="main-footer">
-        <div>
-            © 2026 Анна Серова
-        </div>
+        <span>© 2026 Анна Серова</span>
     </footer>
 </template>
 
