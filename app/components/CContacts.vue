@@ -3,7 +3,7 @@ import { contacts } from '~/info';
 </script>
 
 <template>
-    <div class="contacts">
+    <div class="contacts" id="js-contacts">
         <h2>Расскажите мне про ваш проект</h2>
 
         <div>

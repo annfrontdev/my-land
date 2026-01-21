@@ -4,6 +4,11 @@ import AppButton from '~/elements/AppButton.vue';
 import GreenLabel from "~/elements/GreenLabel.vue";
 const store = usePopupStore()
 const { openPopup } = store
+
+function scrollToContacts() {
+    const contacts = document.querySelector('#js-contacts')
+    contacts?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 </script>
 
 <template>
@@ -16,7 +21,7 @@ const { openPopup } = store
                 интернете.</p>
 
             <div class="promo__btns">
-                <AppButton variant="primary">Связаться</AppButton>
+                <AppButton variant="primary" @click="scrollToContacts">Связаться</AppButton>
                 <AppButton variant="secondary" @click="openPopup">Резюме</AppButton>
             </div>
         </div>
