@@ -10,10 +10,11 @@ const REVIEWS = [
 ]
 
 const trackRef = ref()
-const timeline = gsap.timeline({ defaults: { duration: 10, repeat: -1, paused: true, } })
+const timeline = gsap.timeline({ defaults: { duration: 10, repeat: -1, paused: true } })
 
 onMounted(() => {
     if (!trackRef.value) return;
+
     cloneElements(trackRef.value)
     startAnimation(timeline, trackRef.value)
 
@@ -35,10 +36,10 @@ function cloneElements(el: HTMLElement) {
     })
 }
 
-function startAnimation(animation: GSAPTimeline, el: HTMLElement) {
+function startAnimation(tl: GSAPTimeline, el: HTMLElement) {
     const width = el.scrollWidth / 2;
 
-    animation.to(el, {
+    tl.to(el, {
         x: -width,
         duration: 20,
         ease: "linear",

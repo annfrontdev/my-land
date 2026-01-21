@@ -5,11 +5,12 @@ defineEmits(['closePopup'])
 <template>
     <div class="popup">
         <div @click="$emit('closePopup')" class="popup__overlay"></div>
+
         <div class="popup__content">
-            <button @click="$emit('closePopup')"  type="button" class="popup__closer">
+            <button @click="$emit('closePopup')" type="button" class="popup__closer">
                 <Icon name="mdi:close" />
             </button>
-            <div>
+            <div class="popup__wrapper">
                 <slot></slot>
             </div>
         </div>
@@ -38,7 +39,15 @@ defineEmits(['closePopup'])
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-self: flex-end;
+        position: sticky;
+        top: 0;
+        left: 100%;
+        transition: all 0.2s;
+        z-index: 102;
+
+        &:hover {
+            filter: drop-shadow(0 0 10px $primary);
+        }
     }
 
 
@@ -57,11 +66,22 @@ defineEmits(['closePopup'])
         width: auto;
         height: 90%;
         max-width: 90%;
-        overflow: auto;
-        scrollbar-color: $light-bg $primary;
+        scrollbar-width: 2px;
+
         background-color: $light-bg;
         border: 1px solid $primary;
-        padding: 1rem;
+        overflow-y: auto;
+        box-shadow: 0 0 4px 0 $primary;
+        // display: flex;
+        // flex-direction: column;
+        scrollbar-color: $light-bg $primary;
+    }
+
+    &__wrapper {
+        position: relative;
+        flex-grow: 1;
+        padding: 2rem 4rem;
+        scrollbar-color: $light-bg $primary;
     }
 }
 </style>

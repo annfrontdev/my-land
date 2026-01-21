@@ -7,7 +7,7 @@ const { closePopup } = store
 
 <template>
     <div class="main-page">
-        <ShortProfile />
+        <ShortProfile class="main-page__short-profile" />
         <div class="main-page__content js-scroll-content">
             <CPromo />
             <CServices />
@@ -31,6 +31,16 @@ const { closePopup } = store
     &__content {
         overflow: auto;
         padding: 16px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+        height: auto;
+
+        &__short-profile {
+            display: none;
+        }
     }
 }
 </style>

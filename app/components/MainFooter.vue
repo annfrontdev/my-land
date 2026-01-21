@@ -6,9 +6,6 @@
         <div>
             © 2026 Анна Серова
         </div>
-        <div>
-            Фронтенд разработчик
-        </div>
     </footer>
 </template>
 
@@ -16,9 +13,14 @@
 .main-footer {
     padding: 3rem 16px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    font-size: 16px;
+    justify-content: flex-start;
+    font-size: 1rem;
     font-weight: lighter;
+
+    @media (max-width: $mobile) {
+        justify-content: center;
+    }
 }
 </style>

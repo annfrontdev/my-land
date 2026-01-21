@@ -19,7 +19,7 @@ const timeline = gsap.timeline({
 
 onMounted(() => {
     if (!lightRef.value) return;
-    startAnimation(timeline);
+    startAnimation(timeline, lightRef.value,);
 
     ScrollTrigger.create({
         scroller: '.js-scroll-content',
@@ -31,7 +31,7 @@ onMounted(() => {
     });
 });
 
-function startAnimation(tl: GSAPTimeline) {
+function startAnimation(tl: GSAPTimeline, el: HTMLElement) {
     tl.fromTo(lightRef.value, {
         boxShadow: `0px 0px 0 0 rgba(${PRIMARY_COLOR},1)`,
     }, {
@@ -59,6 +59,7 @@ function startAnimation(tl: GSAPTimeline) {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-bottom: 1rem;
 
     &__light {
         display: block;
@@ -66,6 +67,12 @@ function startAnimation(tl: GSAPTimeline) {
         border-radius: 50%;
         width: 8px;
         height: 8px;
+    }
+
+    @media (max-width: $mobile) {
+        width: auto;
+        padding: 8px 16px;
+        display: inline-flex;
     }
 }
 </style>

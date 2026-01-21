@@ -11,8 +11,8 @@ const { openPopup } = store
         <div>
             <GreenLable />
             <h1>Frontend <br /> разработчик</h1>
-            <p>Работала в компаниях и на фрилансе, делала лендинги и многостраничные сайты с разным функционалом.
-                Предоставляю услуги создания лендингов под ключ: создам, предоставлю дизайн, настрою для отображения в
+            <p>Работала в компаниях и на фрилансе, делала лендинги и многостраничные сайты с разным функционалом.</p>
+            <p> Предоставляю услуги создания лендингов под ключ: создам, предоставлю дизайн, настрою для отображения в
                 интернете.</p>
 
             <div class="promo__btns">
@@ -35,7 +35,7 @@ const { openPopup } = store
         font-size: 5rem;
         line-height: 120%;
         margin: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     p {
@@ -47,6 +47,28 @@ const { openPopup } = store
         display: flex;
         align-items: center;
         gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: $tablet) {
+        @include section;
+        margin-top: 0;
+        height: auto;
+    }
+
+    @media (max-width: $mobile) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+
+        &__btns {
+            display: grid;
+        }
     }
 }
 </style>

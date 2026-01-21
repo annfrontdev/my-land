@@ -77,5 +77,11 @@ const works = [
         }
     }
 
+    @media (max-width: $tablet) {
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+
 }
 </style>

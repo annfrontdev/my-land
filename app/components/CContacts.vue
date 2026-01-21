@@ -43,5 +43,17 @@
             font-size: 2rem;
         }
     }
+
+    @media (max-width: $mobile) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        &__link {
+            a {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
 </style>

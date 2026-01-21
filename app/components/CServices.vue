@@ -71,7 +71,7 @@ const services = [
         }
 
         h3 {
-            font-size: 36px;
+            font-size: 2rem;
             line-height: 120%;
             margin: 0;
             font-weight: normal;
@@ -81,6 +81,23 @@ const services = [
         p {
             margin: 0;
             font-size: 16px;
+            font-weight: lighter;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        li {
+            padding: 8px;
+            gap: 1rem;
+
+            &>span {
+                font-size: 2rem;
+                min-width: 60px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
         }
     }
 }

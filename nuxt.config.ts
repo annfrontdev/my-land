@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/styles/_colors.scss" as *;@use "~/styles/_mixins.scss" as *;',
+          additionalData: '@use "~/styles/_colors.scss" as *;@use "~/styles/_mixins.scss" as *;@use "~/styles/_variables.scss" as *;',
         },
       },
     },
