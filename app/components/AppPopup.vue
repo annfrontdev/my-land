@@ -72,8 +72,6 @@ defineEmits(['closePopup'])
         border: 1px solid $primary;
         overflow-y: auto;
         box-shadow: 0 0 4px 0 $primary;
-        // display: flex;
-        // flex-direction: column;
         scrollbar-color: $light-bg $primary;
     }
 
@@ -82,6 +80,18 @@ defineEmits(['closePopup'])
         flex-grow: 1;
         padding: 2rem 4rem;
         scrollbar-color: $light-bg $primary;
+    }
+
+    @media (max-width: $tablet) {
+        &__wrapper {
+            padding: 1rem 2rem;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        &__wrapper {
+            padding: 1rem;
+        }
     }
 }
 </style>

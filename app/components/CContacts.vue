@@ -1,6 +1,5 @@
 <script setup lang='ts'>
 import { contacts } from '~/info';
-
 </script>
 
 <template>
@@ -12,11 +11,10 @@ import { contacts } from '~/info';
                 <span>Почта для связи</span>
                 <a :href="`mailto:${contacts.email}`">{{ contacts.email }}</a>
 
-
-                <div class="contacts__link">
-                    <span> Если нужно обсудить голосом</span>
-                    <a :href="`tel:${contacts.phone}`"> {{ contacts.phone }}</a>
-                </div>
+            </div>
+            <div class="contacts__link">
+                <span> Если нужно обсудить голосом</span>
+                <a :href="`tel:${contacts.phone}`"> {{ contacts.phone }}</a>
             </div>
         </div>
     </div>

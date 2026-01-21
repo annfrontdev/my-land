@@ -37,10 +37,6 @@ const { closePopup } = store
         grid-template-columns: 1fr;
         overflow-y: auto;
         height: 100%;
-
-        &__short-profile {
-            display: none;
-        }
     }
 }
 </style>

@@ -96,5 +96,9 @@ import { contacts } from '~/info';
 
         }
     }
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
 }
 </style>
