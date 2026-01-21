@@ -28,10 +28,10 @@ defineProps<Props>()
     padding: 1rem;
     transition: all 0.3s;
     border: 2px solid $primary;
+    color: $white;
 
     &.primary {
         background-color: $primary;
-
     }
 
     &.secondary {
